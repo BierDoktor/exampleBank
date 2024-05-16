@@ -18,7 +18,7 @@ def hello(name):
     print('Hello ' + name)
 
 hello('John')
-# hello('John', 'Doe')
+#hello('John', 'Doe')
 
 # Arguments
 def my_function_with_args(username, greeting):
@@ -29,6 +29,10 @@ def my_function_with_args(username, greeting):
 my_function_with_args('John Doe', 'a great year.')
 
 # Return Values
+# return statements = functions send Python values / objects back to the caller
+# these values / objects are called return values
+# we can pass arguments to function and then our function can do something with 
+# those arguments and then our function can pass some value or object back to the caller
 def sum_two_numbers(a, b):
     return a + b
 
@@ -36,7 +40,7 @@ print(sum_two_numbers(5, 10))
 
 # Functions can call other functions
 def call_function():
-    my_function()
+    my_function() 
 
 call_function()
 
@@ -54,16 +58,7 @@ call_function_with_args(my_function)
 def parent_function():
     def child_function():
         print('Hello from the child function')
+
     child_function()
 
 parent_function()
-
-# Functions can return other functions
-def return_function():
-    def child_function():
-        print("Hello from the child function")
-    return child_function
-
-new_function = return_function()
-
-new_function()
