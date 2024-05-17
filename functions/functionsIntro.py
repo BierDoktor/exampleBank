@@ -18,7 +18,7 @@ def hello(name):
     print('Hello ' + name)
 
 hello('John')
-#hello('John', 'Doe')
+# hello('John', 'Doe')
 
 # Arguments
 def my_function_with_args(username, greeting):
