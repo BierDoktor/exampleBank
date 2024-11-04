@@ -18,4 +18,4 @@ print(random_choice)
 import my_module
 
 # Call the greet function
-my_module.greet("Alice")
+my_module.greet('Stefan')
