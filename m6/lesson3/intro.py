@@ -5,9 +5,8 @@ import random
 pygame.init()
 
 # Screen dimensions
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 500, 500
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Game Template")
 
 # Colors
 WHITE = (255, 255, 255)
@@ -74,6 +73,7 @@ def draw_score_lives():
 
 # Game loop
 running = True
+
 while running:
     pygame.time.delay(30)
     screen.fill(WHITE)
@@ -87,6 +87,7 @@ while running:
     
     for enemy in enemies:
         enemy.move()
+
         if player.get_rect().colliderect(enemy.get_rect()):
             score += 1
             enemy.y = 0
@@ -96,10 +97,11 @@ while running:
             enemy.x = random.randint(0, WIDTH - enemy.width)
             
             # Correctly reference global lives
-            
             lives -= 1
+
             if lives == 0:
                 running = False
+
         enemy.draw(screen)
     
     player.draw(screen)
