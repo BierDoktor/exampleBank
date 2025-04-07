@@ -87,7 +87,7 @@ class Brick:
 # Create game objects
 paddle = Paddle()
 ball = Ball()
-bricks = [Brick(x * 55 + 10, y * 25 + 50) for x in range(1) for y in range(1)]
+bricks = [Brick(x * 55 + 10, y * 25 + 50) for x in range(9) for y in range(3)]
 score = 0
 
 # Game loop
